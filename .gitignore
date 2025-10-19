@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Training data
+train/data/*.tif
+train/data/*.box
+train/data/*.lstmf
+train/data/*.txt
+
+# Training output (intermediate and final files)
+train/output/*
+!train/output/.gitkeep
+
+# Training intermediate files
+*.lstm
+*_checkpoint
+training_files.txt
+training_output.log
+regenerate_output.log
+
+# Model files (large binary files - regenerate with training)
+*.traineddata
+*.traineddata.gz
+# Exception: Include custom model for GitHub Pages deployment
+!app/public/tessdata/jpn_custom.traineddata.gz
+!app/public/tessdata/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python

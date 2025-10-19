@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本語OCR - Tesseract.js カスタムモデル</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>日本語OCR デモ</h1>
+            <p>tesseract.jsとカスタムモデルを使用した日本語文字認識</p>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <div class="model-selector">
+                    <label for="model-select">モデル選択:</label>
+                    <select id="model-select">
+                        <option value="jpn">標準日本語モデル (jpn)</option>
+                        <option value="jpn_custom">カスタムモデル (jpn_custom)</option>
+                        <option value="jpn_vert">縦書き日本語 (jpn_vert)</option>
+                    </select>
+                </div>
+
+                <div class="file-input-wrapper">
+                    <label for="file-input" class="file-label">
+                        <span class="upload-icon">📁</span>
+                        <span>画像を選択またはドロップ</span>
+                    </label>
+                    <input type="file" id="file-input" accept="image/*" style="display: none;">
+                </div>
+
+                <div class="drop-zone" id="drop-zone">
+                    <p>画像をここにドラッグ＆ドロップ</p>
+                </div>
+            </section>
+
+            <section class="preview-section" id="preview-section" style="display: none;">
+                <h2>プレビュー</h2>
+                <div class="image-container">
+                    <img id="preview-image" alt="Preview">
+                </div>
+                <button id="process-btn" class="btn-primary">OCR実行</button>
+            </section>
+
+            <section class="progress-section" id="progress-section" style="display: none;">
+                <h2>処理中...</h2>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p id="progress-text">初期化中...</p>
+            </section>
+
+            <section class="result-section" id="result-section" style="display: none;">
+                <h2>認識結果</h2>
+                <div class="result-stats">
+                    <span>信頼度: <strong id="confidence">-</strong></span>
+                    <span>処理時間: <strong id="processing-time">-</strong></span>
+                </div>
+                <div class="result-container">
+                    <textarea id="result-text" rows="10" placeholder="認識されたテキストがここに表示されます"></textarea>
+                </div>
+                <div class="result-actions">
+                    <button id="rerun-btn" class="btn-primary">別のモデルで再実行</button>
+                    <button id="copy-btn" class="btn-secondary">コピー</button>
+                    <button id="download-btn" class="btn-secondary">テキストをダウンロード</button>
+                    <button id="reset-btn" class="btn-secondary">リセット</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by <a href="https://tesseract.projectnaptha.com/" target="_blank">Tesseract.js</a></p>
+        </footer>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>

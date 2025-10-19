@@ -1,0 +1,16 @@
+{
+  "name": "tesseract-jp-ocr-app",
+  "version": "1.0.0",
+  "description": "Japanese OCR application using custom Tesseract.js models",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "tesseract.js": "^5.0.4"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
