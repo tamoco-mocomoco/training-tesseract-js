@@ -83,7 +83,7 @@ async function createModelWorker(modelName) {
 
     if (modelName === 'jpn_custom') {
         return await createWorker(modelName, 1, {
-            langPath: `${window.location.origin}/tessdata`
+            langPath: './tessdata'
         });
     } else {
         return await createWorker(modelName);
