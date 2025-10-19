@@ -1,5 +1,5 @@
 ---
-title: "Tesseract.jsでカスタムモデルを使った日本語OCRアプリを作った"
+title: "Tesseract.jsでカスタムモデルのトレーニングとOCRを確認できる仕組みを作った"
 emoji: "🔍"
 type: "tech"
 topics: ["tesseract", "ocr", "javascript", "docker", "machinelearning"]
