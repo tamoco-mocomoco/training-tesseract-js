@@ -43,6 +43,7 @@ train/output/*
 training_files.txt
 training_output.log
 regenerate_output.log
+train/source/training_texts_expanded.txt
 
 # Model files (large binary files - regenerate with training)
 *.traineddata
