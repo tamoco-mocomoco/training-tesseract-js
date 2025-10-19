@@ -86,8 +86,8 @@ async function createModelWorker(modelName) {
             langPath: './tessdata'
         });
     } else if (modelName === 'jpn_numbers') {
-        // 数字専用モデル（標準jpnモデルをホワイトリストで制限）
-        const worker = await createWorker('jpn');
+        // 数字専用モデル（標準engモデルをホワイトリストで制限）
+        const worker = await createWorker('eng');
         await worker.setParameters({
             tessedit_char_whitelist: '0123456789'
         });
